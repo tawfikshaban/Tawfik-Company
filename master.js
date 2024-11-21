@@ -16,33 +16,31 @@ const product = document.querySelector("#products");
 const saveButton = document.querySelector(".save");
 
 let ImgArray = [
-  "../imgs/car-1.avif",
-  "../imgs/car-2.jpeg",
-  "../imgs/car-3.avif",
-  "../imgs/car-4.avif",
-  "../imgs/tawfik-1.jpg",
-  "../imgs/tawfik-2.jpg",
-  "../imgs/tawfik-3.jpg",
-  "../imgs/tawfik-4.jpg",
-  "../imgs/tawfik-5.jpg",
-  "../imgs/tawfik-6.jpg",
-  "../imgs/tawfik-7.jpg",
-  "../imgs/tawfik-8.jpg",
+  "car-1.avif",
+  "car-2.jpeg",
+  "car-3.avif",
+  "car-4.avif",
+  "tawfik-1.jpg",
+  "tawfik-2.jpg",
+  "tawfik-3.jpg",
+  "tawfik-4.jpg",
+  "tawfik-5.jpg",
+  "tawfik-6.jpg",
+  "tawfik-7.jpg",
+  "tawfik-8.jpg",
 ];
 
 setInterval(() => {
   let RandomNumber = Math.floor(Math.random() * ImgArray.length);
-  thing.style.backgroundImage = 'url("../imgs/' + ImgArray[RandomNumber] + '")';
+  thing.style.backgroundImage = 'url("imgs/' + ImgArray[RandomNumber] + '")';
 }, 5000);
 setInterval(() => {
   let RandomNumber = Math.floor(Math.random() * ImgArray.length);
-  thing2.style.backgroundImage =
-    'url("../imgs/' + ImgArray[RandomNumber] + '")';
+  thing2.style.backgroundImage = 'url("imgs/' + ImgArray[RandomNumber] + '")';
 }, 5000);
 setInterval(() => {
   let RandomNumber = Math.floor(Math.random() * ImgArray.length);
-  thing3.style.backgroundImage =
-    'url("../imgs/' + ImgArray[RandomNumber] + '")';
+  thing3.style.backgroundImage = 'url("imgs/' + ImgArray[RandomNumber] + '")';
 }, 5000);
 
 let gear = document.querySelector(".setting-box");
@@ -58,7 +56,7 @@ gear.onclick = () => {
 //   gear.classList.remove("r-200");
 //   settingPage.classList.remove("r-0");
 // };
-// div.style.backgroundImage = "url(../imgs/car-1.avif)";
+// div.style.backgroundImage = "url(imgs/car-1.avif)";
 thing.style.cssText =
   "padding-left:5px width:300px; height:500px;background-repeat:no-repeat; background-position:center center; background-size:contain; transition:0.7s; border-radius:20px; overflow:hidden;";
 thing2.style.cssText =
@@ -253,10 +251,10 @@ if (window.localStorage.getItem("color_option") === MainColor.dataset.color) {
   FourColor.classList.add("color-active");
 }
 if (body.classList.contains("NightBackground")) {
-  aboutImg.setAttribute("src", " ../imgs/picture/gradient.png ");
+  aboutImg.setAttribute("src", " imgs/picture/gradient.png ");
   overlay.style.cssText = "display:none;";
 } else {
-  aboutImg.setAttribute("src", " ../imgs/picture/premium.png ");
+  aboutImg.setAttribute("src", " imgs/picture/premium.png ");
   overlay.style.cssText = "display:none;";
 }
 
@@ -369,11 +367,10 @@ barIcon.onclick = function () {
 };
 
 document.addEventListener("click", (e) => {
-  e.stopPropagation()
+  e.stopPropagation();
   if (e.target !== barIcon && e.target !== NavUL) {
     Nav.classList.add("hidden");
     barIcon.classList.remove("bar-active");
-  e.stopPropagation();
-
+    e.stopPropagation();
   }
 });
