@@ -48,7 +48,7 @@ const settingPage = document.querySelector(".setting-page");
 let icon = document.querySelector(".gear");
 gear.onclick = () => {
   settingPage.classList.toggle("r-0");
-  gear.classList.toggle("r-200");
+  icon.classList.toggle("r-200");
   icon.classList.toggle("animate-spin");
 };
 
@@ -86,11 +86,6 @@ let overlay = document.querySelector(".overlay");
 // Night Mode Button
 NightButton.addEventListener("click", function () {
   // Remove Default Background Image
-
-  if (
-    window.localStorage.getItem("Site-Mode") === "black" ||
-    window.localStorage.getItem("Site-Mode") === "#172554"
-  ) {
     body.style.removeProperty("background-image");
     landingPage.style.removeProperty("background-image");
     product.style.removeProperty("background-image");
@@ -101,7 +96,7 @@ NightButton.addEventListener("click", function () {
     gallery.style.removeProperty("background-image");
     contactUs.style.removeProperty("background-image");
     overlay.style.cssText = "display:none;";
-  }
+  
   // Check Dark Mode And Remove It
 
   if (body.classList.contains("DarkBackground")) {
